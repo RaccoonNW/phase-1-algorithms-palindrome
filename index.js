@@ -1,13 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let reversed = ""
+  for (let i = word.length - 1; i >= 0; i--) {
+    reversed += word[i]
+  }
+  return (reversed === word)
 }
-
 /* 
-  Add your pseudocode here
+  Take in string
+  Create variable to store reversed string
+  Loop through each character of string in reverse
+  Push reversed characters into variable
+  compare reversed string to original string
 */
 
 /*
-  Add written explanation of your solution here
+  isPalindrome takes in a string
+  empty variable called reversed will hold new reversed string
+  for loop through supplied string in reverse
+  compare reversed string to original to return true or false
 */
 
 // You can run `node index.js` to view these console logs
@@ -16,7 +26,8 @@ if (require.main === module) {
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("doggod"))
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
